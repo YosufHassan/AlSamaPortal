@@ -1,25 +1,25 @@
 <div><%- include('../partials/header.ejs') %></div>
 <div class="book-details-grid">
   <div class="book-details-label">Shop Name:</div>
-  <h2 class="page-header"><%= shop.ShopName %></h2>
+  <h5 class="page-header"><%= shop.ShopName %></h5>
   <div class="book-details-label">GRA Number:</div>
-  <h2><%= shop.GRANumber %></h2>
+  <h5><%= shop.GRANumber %></h5>
   <div class="book-details-label">Liscense Number:</div>
-  <h2><%= shop.LiscenseNumber %></h2>
+  <h5><%= shop.LiscenseNumber %></h5>
   <div class="book-details-label">Renewal Date:</div>
-  <h2><%= shop.RenewalDate.toDateString() %></h2>
+  <h5><%= shop.RenewalDate.toDateString() %></h5>
   <div class="book-details-label">ExpiryDate:</div>
-  <h2><%= shop.ExpiryDate.toDateString() %></h2>
+  <h5><%= shop.ExpiryDate.toDateString() %></h5>
   <div class="book-details-label">Area:</div>
-  <h2><%= shop.Area %></h2>
+  <h5><%= shop.Area %></h5>
   <div class="book-details-label">Contact Number:</div>
-  <h2><%= shop.ContactNumber %></h2>
+  <a href="tel:<%= shop.ContactNumber %>"><h5><%= shop.ContactNumber %></h5></a>
   <div class="book-details-label">GPS Coordinates:</div>
-  <h2><%= shop.Coordination %></h2>
+  <a href="https://maps.google.com/?q=<%= shop.Coordination %>"><h5><%= shop.Coordination %></h5></a>
   <div class="book-details-label">Certificate Validity:</div>
-  <h2><%= shop.CertificateValidity %></h2>
+  <h5><%= shop.CertificateValidity %></h5>
   <div class="book-details-label">Note:</div>
-  <h2><%= shop.Note %></h2>
+  <h5><%= shop.Note %></h5>
 
   <div class="btn-row">
     <a class="btn btn-primary" href="/shops/<%= shop.id %>/edit">Edit</a>

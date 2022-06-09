@@ -1,33 +1,24 @@
 <%- include('../partials/errorMessage.ejs') %>
+
+  <div class="form-item">
+    <label>Shop Name</label>
+    <input type="text" name="ShopName" value="<%= shop.ShopName %>">
+  </div>
+  <br>
+  <div class="form-row">
     <div class="form-item">
-      <label>Shop Name</label>
-      <input type="text" name="ShopName" value="<%= shop.ShopName %>">
+      <label>Contact Number</label>
+      <input type="text" name="ContactNumber" value="<%= shop.ContactNumber %>">
     </div>
-  
-    <br>
-    <div class="form-item">
-      <label>GRA Number</label>
-      <input type="text" name="GRANumber" value="<%= shop.GRANumber %>">
-    </div>
-    <br>
-    <div class="form-item">
-      <label>Liscense Number</label>
-      <input type="text" name="LiscenseNumber" value="<%= shop.LiscenseNumber %>">
-    </div>
-    <br>
-    <div class="form-item">
-      <label>RenewalDate</label>
-      <input type="date" name="RenewalDate" value="<%= shop.RenewalDate == null ? '' : shop.RenewalDate.toISOString().split('T')[0] %>">
-    </div>
-    <br>
-    <div class="form-item">
-      <label>ExpiryDate</label>
-      <input type="date" name="ExpiryDate" value="<%= shop.ExpiryDate == null ? '' : shop.ExpiryDate.toISOString().split('T')[0] %>">
-    </div>
-    <br>
+  </div>
+
+  <br>
+
+  <div class="form-row">
+
     <div class="form-item">
       <label>Area</label>
-      <select name= "Area">
+      <select name="Area">
         <option value="Al Nakheel">Al Nakheel</option>
         <option value="Al Salehiya">Al Salehiya</option>
         <option value="Dahan">Dahan</option>
@@ -79,19 +70,46 @@
         <option value="Al Hayl">Al Hayl</option>
       </select>
     </div>
-    <br>
-    <div class="form-item">
-        <label>Contact Number</label>
-        <input type="text" name="ContactNumber" value="<%= shop.ContactNumber %>">
-    </div>
-    <br>
+
     <div class="form-item">
       <label>Location Coordintes</label>
       <input type="text" name="Coordination" value="<%= shop.Coordination %>">
     </div>
+
+  </div>
+  <br>
+
+  <div class="form-row">
+    <div class="form-item">
+      <label>GRA Number</label>
+      <input type="text" name="GRANumber" value="<%= shop.GRANumber %>">
+    </div>
+
+    <div class="form-item">
+      <label>Liscense Number</label>
+      <input type="text" name="LiscenseNumber" value="<%= shop.LiscenseNumber %>">
+    </div>
+  </div>
+  <br>
+  <div class="form-row">
+    <div class="form-item">
+      <label>RenewalDate</label>
+      <input type="date" name="RenewalDate"
+        value="<%= shop.RenewalDate == null ? '' : shop.RenewalDate.toISOString().split('T')[0] %>">
+    </div>
     <br>
     <div class="form-item">
-      <label>Certificate Validity</label>
+      <label>ExpiryDate</label>
+      <input type="date" name="ExpiryDate"
+        value="<%= shop.ExpiryDate == null ? '' : shop.ExpiryDate.toISOString().split('T')[0] %>">
+    </div>
+  </div>
+
+  <br>
+
+  <div class="form-row">
+    <div class="form-item">
+      <label>Validity</label>
       <select name="CertificateValidity">
         <option value="Valid">Valid</option>
         <option value="Pending">Pending</option>
@@ -104,5 +122,5 @@
       <label>Note</label>
       <input type="text" name="Note" value="<%= shop.Note %>">
     </div>
-    <br>
-
+  </div>
+  <br>
