@@ -1,0 +1,55 @@
+@import 'shared/variables.css';
+@import 'shared/fonts.css';
+@import 'shared/header.css';
+@import 'shared/buttons.css';
+@import 'shared/form.css';
+@import 'shared/author.css';
+@import 'shared/books.css';
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@font-face {
+  font-family: Hacked;
+  src: url(https://hackedfont.com/HACKED.ttf);
+}
+
+:root {
+  font-family: 'Helvetica';
+  font-size: 20px;
+  color: #07031a;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+
+.inner-container {
+  margin: 0 2rem;
+}
+
+.page-header {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.footer__copy {
+  display: block;
+  margin: 2.5rem 0 2rem;
+  text-align: center;
+  color: #000;
+}
+
+.error-message {
+  color: hsl(var(--color-danger-hue), 100%, 50%);
+  text-align: center;
+  font-weight: 600;
+}
+
