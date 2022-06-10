@@ -1,8 +1,8 @@
 :root {
   --form-label-font-size: 1.2rem;
   --form-input-background-color: #fff;
-  --form-input-border-color: #04b1ee;
-  --form-input-border-color-light: #04b1ee;
+  --form-input-border-color: #F15412;
+  --form-input-border-color-light: #F15412;
 }
 
 .form-row {
