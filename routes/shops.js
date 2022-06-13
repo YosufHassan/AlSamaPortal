@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const Shop = require("../models/shop");
-const {ensureAuthenticated} = require('../config/auth');
+const { ensureAuthenticated } = require('../config/auth');
+const fs = require('fs');
 
 // All shops route
 
@@ -44,13 +45,16 @@ router.post("/", ensureAuthenticated, async (req, res) => {
     CertificateValidity: req.body.CertificateValidity,
     Note: req.body.Note,
   });
+
+  saveFiles(shop,req.body.Files)
+
   try {
     const newShop = await shop.save();
     res.redirect("shops/${newShop.id}");
   } catch {
     res.render("shops/new", {
       shop: shop,
-      errorMessage:"Error Creating a shop"
+      errorMessage: "Error Creating a shop"
     });
   }
 });
@@ -125,5 +129,27 @@ router.delete("/:id", ensureAuthenticated, async (req, res) => {
     }
   }
 });
+
+
+function saveFiles(shop, files) {
+  if (files == null) return
+  filesarr = []
+  files.forEach(file => {
+    fileobj = JSON.parse(file)
+    const data = {
+      name: fileobj["name"],
+      type: fileobj["type"],
+      data: fileobj["data"]
+    }
+    filesarr.push(data)
+  });
+  shop.Files = filesarr
+}
+
+function downloadFiles(shop,files){
+  
+  let buff = Buffer.from(data,'base64')
+  fs.writeFileSync(files)
+}
 
 module.exports = router;

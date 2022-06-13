@@ -1,8 +1,8 @@
 :root {
   --form-label-font-size: 1.2rem;
   --form-input-background-color: #fff;
-  --form-input-border-color: #F15412;
-  --form-input-border-color-light: #F15412;
+  --form-input-border-color: #34B3F1;
+  --form-input-border-color-light: #34B3F1;
 }
 
 .form-row {
@@ -73,6 +73,6 @@
 }
 
 .filepond--drop-label {
-  color: var(--color-text-light);
+  color: #000000d8;
   font-size: inherit;
 }

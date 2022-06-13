@@ -41,7 +41,7 @@ const shopSchema = new mongoose.Schema({
         type:String,
         required:false
     },
-    Files:[String]
+    Files:[{}]
   })
 
   module.exports = mongoose.model('Shop', shopSchema)
