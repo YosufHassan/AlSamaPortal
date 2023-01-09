@@ -2,6 +2,8 @@
 
  Al Sama Portal is an application portal that aids the organization to effectively manage their clients by storing and retreiving data.
  
+ # This is not the entire application since it is private and under NDA
+ 
  # Features available in the Al Sama Portal application
  
  In this section, the features available in the Al Sama Portal will be discussed
